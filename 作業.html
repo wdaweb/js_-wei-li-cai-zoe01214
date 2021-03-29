@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        for (let a = 1; a <= 50; a++) {
+            const wili = () => {
+                let c = []
+                for (let i = 0; i <= 5; i++) {
+                    c[i] = Math.round(Math.random() * 37 + 1)
+                    console.log(c)
+                    for (let j = 0; j < i; j++) {
+                        if (c[j] == c[i]) {
+                            console.log(`i--`)
+                            i--;
+                            break;
+                        }
+                    }
+                }
+                d = Math.round(Math.random() * 7 + 1)
+                return document.write(`A區選號：${c}<br>B區選號：${d}`)
+            }
+            wili()
+            document.write(`<br><br>`)
+        }
+
+        // 正解威力彩
+        // 1.
+        // const rand=(min,max)=>{
+        // return Math.round(Math.random() * (max - min) + min)
+        // }
+        // let a = []
+        // for (let i = 1; i <= 6; i++) {
+        //     let number = rand(1, 38)
+        //     if (a.includes(number)) {
+        //         i--
+        //     } else {
+        //         a.push(number)
+        //     }
+        // }
+        // document.write(`A:${a.join(',')}`)
+        // document.write(`B:${rand(1,8)}`)
+
+        // 2.
+        // while (a.length < 6) {
+        //     let number = rand(1, 38)
+        //     if (!a.includes(number)) {
+        //         a.push(number)
+        //     }
+        // }
+
+        // 3.
+        // let numbers=[]
+        // for(let i=1;i<38;i++){
+        //     numbers.push(i)
+        // }
+
+        // for(let i=1;i<=6;i++){
+        //     let index=rand(0,numbers.length-1)
+        //     a.push(numbers[index])
+        //     numbers.splice(index,1)
+        // }
+    </script>
+</body>
+
+</html>
